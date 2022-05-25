@@ -57,7 +57,8 @@
     </div>
   </header>
 
-  <main class="main">
+  <main id="scroll" class="main">
+
     <section class="banner">
       <div class="banner__wrapper">
         <div class="container">
@@ -76,6 +77,7 @@
         </div>
       </div>
     </section>
+
     <section class="about">
       <div class="about__wrapper">
         <div class="container">
@@ -123,45 +125,48 @@
         </div>
       </div>
     </section>
+
+
+
     <section class="faq">
-      <div class="faq__warapper">
+      <div class="faq__warapper position-relative decor-buble">
         <div class="container">
-          <div class="faq__inner">
-            <h2 class="faq__title">FAQ</h2>
+          <div class="faq__inner position-relative">
+            <h2 class="faq__title title-56px">FAQ</h2>
             <div class="accordion">
               <ul class="accordion__items">
                 <li class="accordion__item">
-                  <button class="accordion__item_button">What is a Decentralized Autonomous Organization (DAO)?</button>
+                  <button class="accordion__item_button position-relative fw-600">What is a Decentralized Autonomous Organization (DAO)?</button>
                   <div class="accordion__item_text">It is an incorruptible form of organization that belongs to the
                     people who helped create and fund it, and whose rules are public.</div>
                 </li>
                 <li class="accordion__item">
-                  <button class="accordion__item_button">Why is Meta Music a DAO?</button>
+                  <button class="accordion__item_button position-relative fw-600">Why is Meta Music a DAO?</button>
                   <div class="accordion__item_text">It is an incorruptible form of organization that belongs to the
                     people who helped create and fund it, and whose rules are public.</div>
                 </li>
                 <li class="accordion__item">
-                  <button class="accordion__item_button">Which Metaverse will the Meta Music project start on?</button>
+                  <button class="accordion__item_button position-relative fw-600">Which Metaverse will the Meta Music project start on?</button>
                   <div class="accordion__item_text">It is an incorruptible form of organization that belongs to the
                     people who helped create and fund it, and whose rules are public.</div>
                 </li>
                 <li class="accordion__item">
-                  <button class="accordion__item_button">Where can i mint a Meta Music NFT?</button>
+                  <button class="accordion__item_button position-relative fw-600">Where can i mint a Meta Music NFT?</button>
                   <div class="accordion__item_text">It is an incorruptible form of organization that belongs to the
                     people who helped create and fund it, and whose rules are public.</div>
                 </li>
                 <li class="accordion__item">
-                  <button class="accordion__item_button">How the mint works?</button>
+                  <button class="accordion__item_button position-relative fw-600">How the mint works?</button>
                   <div class="accordion__item_text">It is an incorruptible form of organization that belongs to the
                     people who helped create and fund it, and whose rules are public.</div>
                 </li>
                 <li class="accordion__item">
-                  <button class="accordion__item_button">When will the mint take place?</button>
+                  <button class="accordion__item_button position-relative fw-600">When will the mint take place?</button>
                   <div class="accordion__item_text">It is an incorruptible form of organization that belongs to the
                     people who helped create and fund it, and whose rules are public.</div>
                 </li>
                 <li class="accordion__item">
-                  <button class="accordion__item_button">What will be the price of the mint?</button>
+                  <button class="accordion__item_button position-relative fw-600">What will be the price of the mint?</button>
                   <div class="accordion__item_text">It is an incorruptible form of organization that belongs to the
                     people who helped create and fund it, and whose rules are public.</div>
                 </li>
@@ -176,16 +181,16 @@
   </main>
 
   <footer class="footer">
-    <div class="footer__wrapper">
+    <div class="footer__wrapper position-relative">
       <div class="container">
-        <div class="footer__inner d-flex justify-content-between">
-          <div class="footer__box d-flex">
+        <div class="footer__inner d-flex justify-content-between align-items-lg-center position-relative">
+          <div class="footer__box d-lg-flex align-items-center">
             <a href="#" class="footer__logo">
               <img src="images/logo.png" alt="logo">
             </a>
-            <p class="footer__text">© 2022, Meta Music. All Rights Reserved</p>
+            <p class="footer__text text-20px">© 2022, Meta Music. All Rights Reserved</p>
           </div>
-          <ul class="footer__social">
+          <ul class="footer__social d-flex">
             <li>
               <a href="#" class="footer__social_link"><img src="images/twitter.svg" alt="twitter"></a>
             </li>
@@ -193,6 +198,9 @@
               <a href="#" class="footer__social_link"><img src="images/discord.svg" alt="discord"></a>
             </li>
           </ul>
+          <a href="#scroll" class="footer__arrow position-absolute d-lg-none">
+            <img src="images/footer-arrow.svg" alt="arrow">
+          </a>
         </div>
       </div>
     </div>
