@@ -1,0 +1,45 @@
+.header {
+  width: 100%;
+  position: fixed;
+  padding: 20px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__button_discord {
+    display: flex;
+    padding: 20px 32px;
+    color: #fff;
+
+    p {
+      margin-right: 20px;
+      line-height: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    &__button_discord {
+      padding: 8px 20px;
+      color: #fff;
+      font-size: 14px;
+      line-height: 24px;
+
+      svg {
+        width: 23px;
+      }
+
+      p {
+        margin-right: 10px;
+      }
+    }
+  }
+}

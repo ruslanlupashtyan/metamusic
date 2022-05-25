@@ -1,0 +1,12 @@
+.btn {
+  background-color: #5824FF;
+  border-radius: 63px;
+
+  &:hover {
+    background: linear-gradient(96.47deg, #2E6FFF -45.7%, #5824FF 100%);
+  }
+
+  &:active {
+    box-shadow: 0px 2px 8px rgba(88, 36, 255, 0.5);
+  }
+}

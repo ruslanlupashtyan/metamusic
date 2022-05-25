@@ -1,0 +1,67 @@
+body {
+  color: #ffffff;
+
+  button {
+    color: #ffffff;
+  }
+}
+
+.banner {
+  padding-top: 275px;
+  height: 100vh;
+  background-image: url(../../images/banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__button {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin-bottom: 118px;
+    text-align: center;
+  }
+
+  &__decor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.about {
+  background-color: #0A0021;
+  padding: 130px 0 140px;
+
+  &__index {
+    font-family: 'Prosto One', cursive;
+    font-size: 28px;
+    line-height: 47px;
+    font-weight: 400;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    padding: 50px 0;
+
+    &:nth-child(2) {
+      position: relative;
+      margin-left: auto;
+
+      &::before {
+        content: url(../../images/wave.png);
+        position: absolute;
+        left: calc(-945px - 130px);
+      }
+    }
+  }
+}
