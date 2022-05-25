@@ -54,6 +54,26 @@ h3 {
   }
 }
 
+.title-32px {
+  font-size: 32px;
+  line-height: 51px;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 18px;
+    line-height: 29px;
+  }
+}
+
+.title-28px {
+  font-size: 28px;
+  line-height: 48px;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 18px;
+    line-height: 29px;
+  }
+}
+
 .decor-buble {
   &::before {
     content: "";
@@ -100,4 +120,49 @@ h3 {
   }
 }
 
-.decor-buble__two {}
+.decor-buble__two {
+  &::before {
+    content: "";
+    position: absolute;
+    height: 700px;
+    width: 700px;
+    background: #170DA5;
+    opacity: 0.3;
+    filter: blur(600px);
+    -webkit-filter: blur(600px);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    z-index: 1;
+
+    @include media-breakpoint-down(sm) {
+      width: 200px;
+      height: 200px;
+      opacity: 0.2;
+      background: #5824FF;
+      filter: blur(200px);
+      -webkit-filter: blur(200px);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    background: #C30AFF;
+    opacity: 0.2;
+    filter: blur(600px);
+    -webkit-filter: blur(600px);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    z-index: 1;
+
+    @include media-breakpoint-down(sm) {
+      width: 300px;
+      height: 300px;
+      background: #C30AFF;
+      filter: blur(300px);
+      -webkit-filter: blur(300px);
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.utilities {
+  &__wrapper {
+    background-color: #0A0021;
+    padding: 150px 0 75px;
+
+    @include media-breakpoint-down(sm) {
+      padding: 40px 0 37px;
+    }
+    &.decor-buble__two {
+      &::before {
+        display: none;
+      }
+      &::after {
+        display: none;
+        @include media-breakpoint-down(sm) {
+          display: block;
+          top: 0;
+          right: -62px;
+        }
+      }
+    }
+  }
+
+  &__inner {
+    z-index: 3;
+  }
+
+  // &__title {}
+  &__items {
+    max-width: 390px;
+
+    @include media-breakpoint-down(sm) {
+      max-width: 271px;
+    }
+  }
+
+  &__item {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(#fff, 0.2);
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    p {
+      padding-left: 52px;
+
+      @include media-breakpoint-down(sm) {
+        padding-left: 48px;
+      }
+
+      &::before {
+        content: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNi4wMDAyIDI2LjI0MDJDMjEuMTk5OCAyNi4yNDAyIDI1LjUyNjcgMjIuMzEyNSAyNi4xNjAzIDE3LjI3NzVDMjYuMjQ4NiAxNi41NzYyIDI2LjgxMzMgMTYuMDAwMiAyNy41MjAyIDE2LjAwMDJDMjguMjI3MSAxNi4wMDAyIDI4LjgwNyAxNi41NzQ5IDI4LjczNjQgMTcuMjc4M0MyOC4wODk4IDIzLjcyNDIgMjIuNjA5IDI4LjgwMDIgMTYuMDAwMiAyOC44MDAyQzguOTYwMiAyOC44MDAyIDMuMjAwMiAyMy4wNDAyIDMuMjAwMiAxNi4wMDAyQzMuMjAwMiA4Ljk2MDIgOC45NjAyIDMuMjAwMiAxNi4wMDAyIDMuMjAwMkMxNi45NDc3IDMuMjAwMiAxNy44OTUzIDMuMzI0NzEgMTguODE5MiAzLjUyNjQ2QzE5Ljc3MjUgMy43MzQ2NSAyMC4wNTI0IDQuOTA4MDYgMTkuMzYyMyA1LjU5ODA2QzE5LjAyNTMgNS45MzUxNCAxOC41MzMzIDYuMDU1NjggMTguMDY2MiA1Ljk2MDM4QzE3LjQxMjIgNS44MjY5MiAxNi43Mzk1IDUuNzYwMiAxNi4wMDAyIDUuNzYwMkMxMC4zNjgyIDUuNzYwMiA1Ljc2MDIgMTAuMzY4MiA1Ljc2MDIgMTYuMDAwMkM1Ljc2MDIgMjEuNjMyMiAxMC4zNjgyIDI2LjI0MDIgMTYuMDAwMiAyNi4yNDAyWiIgZmlsbD0iIzU4MjRGRiIvPgo8cGF0aCBkPSJNMTEuNjQ4MiAxNC40NjQyQzExLjE1MzMgMTMuOTY5MyAxMC4zNTEgMTMuOTY5MyA5Ljg1NjIgMTQuNDY0MkM5LjM2MTM1IDE0Ljk1OSA5LjM2MTM1IDE1Ljc2MTMgOS44NTYyIDE2LjI1NjJMMTQuNzIwMiAyMS4xMjAyTDI2LjYyNDIgOS4yMTYyQzI3LjExOSA4LjcyMTM1IDI3LjExOSA3LjkxOTA0IDI2LjYyNDIgNy40MjQyQzI2LjEyOTMgNi45MjkzNSAyNS4zMjcgNi45MjkzNSAyNC44MzIyIDcuNDI0MkwxNC43MjAyIDE3LjUzNjJMMTEuNjQ4MiAxNC40NjQyWiIgZmlsbD0iIzU4MjRGRiIvPgo8L3N2Zz4K');
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}

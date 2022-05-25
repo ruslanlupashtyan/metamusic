@@ -2,6 +2,7 @@
   width: 100%;
   position: fixed;
   padding: 20px 0;
+  z-index: 10;
 
   &__inner {
     display: flex;

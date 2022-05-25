@@ -14,8 +14,11 @@
 @import 'components/header';
 @import 'components/buttons';
 @import 'components/footer';
+@import 'components/swiper-bundle';
 
 
 // Layouts
 @import "layouts/index";
+@import "layouts/utilities";
+@import "layouts/rewards";
 @import "layouts/faq";

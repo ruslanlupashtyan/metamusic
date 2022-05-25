@@ -1,12 +1,95 @@
 .btn {
-  background-color: #5824FF;
+  transition: all 0.4s;
+  position: relative;
   border-radius: 63px;
+  z-index: 1;
 
-  &:hover {
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 63px;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 63px;
+    background-color: #5824FF;
+    border-radius: 63px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 63px;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
     background: linear-gradient(96.47deg, #2E6FFF -45.7%, #5824FF 100%);
+    transition: all 0.4s;
+    border-radius: 63px;
+  }
+
+  &:hover::after {
+    opacity: 1;
   }
 
   &:active {
     box-shadow: 0px 2px 8px rgba(88, 36, 255, 0.5);
+  }
+
+  &__primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 12px;
+    font-size: 20px;
+    line-height: 32px;
+    color: #fff;
+    min-height: 56px;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
+      line-height: 23px;
+      min-height: 48px;
+    }
+  }
+
+  &__secondary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 60px;
+    padding: 13px 40px;
+    color: #fff;
+    border: 1px solid #FFFFFF;
+    border-radius: 30px;
+    transition: all 0.4s;
+    font-size: 18px;
+    line-height: 31px;
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
+      line-height: 24px;
+      min-height: 48px;
+      padding: 11px 40px;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    &:active {
+      background: rgba(255, 255, 255, 0.4);
+      box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.4);
+    }
   }
 }
