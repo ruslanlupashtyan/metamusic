@@ -2,6 +2,7 @@
   &__wrapper {
     background-color: #0A0021;
     padding: 75px 0 70px;
+
     @include media-breakpoint-down(sm) {
       padding: 37px 0 40px;
     }
@@ -22,19 +23,23 @@
       margin-top: 0px;
       padding: 40px 0 56px;
     }
+
     &.decor-buble__two {
       &::before {
         bottom: -139px;
         left: 50px;
+
         @include media-breakpoint-down(sm) {
           bottom: auto;
           top: -67px;
           left: -54px;
         }
       }
+
       &::after {
         top: 0;
         right: 115px;
+
         @include media-breakpoint-down(sm) {
           top: auto;
           bottom: -51px;
@@ -42,10 +47,31 @@
         }
       }
     }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      opacity: 1;
+      transition: all 0.4s;
+
+      &::after {
+        display: none;
+      }
+    }
+    .swiper-button-next {
+      right: 30px;
+    }
+    .swiper-button-prev {
+      left: 30px;
+    }
+
+    .swiper-button-disabled {
+      opacity: 0;
+    }
   }
 
   &-swiper {
     z-index: 3;
+
     .swiper-wrapper {}
 
     .swiper-slide {
@@ -56,12 +82,15 @@
         max-width: 344px;
       }
     }
+
     .swiper-pagination {
       bottom: -40px;
+
       .swiper-pagination-bullet {
         background: #130440;
         opacity: 1;
       }
+
       .swiper-pagination-bullet.swiper-pagination-bullet-active {
         background: #5824FF;
       }
@@ -152,13 +181,16 @@
 
   &__call {
     padding-top: 79px;
+
     @include media-breakpoint-down(sm) {
       padding-top: 56px;
     }
+
     &_inner {
       background: linear-gradient(96.47deg, #2E6FFF -45.7%, #5824FF 100%);
       border-radius: 20px;
       padding: 60px;
+
       @include media-breakpoint-down(sm) {
         padding: 40px 16px;
         border-radius: 0;
@@ -167,6 +199,7 @@
 
     &_title {
       margin-bottom: 10px;
+
       @include media-breakpoint-down(sm) {
         margin-bottom: 8px;
       }
@@ -174,6 +207,7 @@
 
     &_text {
       margin-bottom: 40px;
+
       @include media-breakpoint-down(sm) {
         margin-bottom: 24px;
       }
@@ -182,6 +216,7 @@
     &_button {
       margin: 0 auto;
       max-width: 251px;
+
       @include media-breakpoint-down(sm) {
         max-width: 164px;
       }

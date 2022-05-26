@@ -4804,12 +4804,12 @@ document.addEventListener('DOMContentLoaded', function () {
         el: '.swiper-pagination',
         clickable: true,
       },
-      // navigation: {
-      //   nextEl: '.course__swiper-button-next',
-      //   prevEl: '.course__swiper-button-prev',
-      // }
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
       breakpoints: {
-        768: {
+        992: {
           centeredSlides: false
         }
       }
