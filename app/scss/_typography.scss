@@ -29,3 +29,140 @@ h3 {
     line-height: 29px;
   }
 }
+
+.text-20px {
+  font-size: 20px;
+  line-height: 34px;
+
+  @include media-breakpoint-down(md) {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.title-56px {
+  font-size: 56px;
+  line-height: 90px;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
+
+.title-32px {
+  font-size: 32px;
+  line-height: 51px;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 18px;
+    line-height: 29px;
+  }
+}
+
+.title-28px {
+  font-size: 28px;
+  line-height: 48px;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 18px;
+    line-height: 29px;
+  }
+}
+
+.decor-buble {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #5824FF;
+    opacity: 0.2;
+    filter: blur(500px);
+    -webkit-filter: blur(500px);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    z-index: 1;
+
+    @include media-breakpoint-down(sm) {
+      width: 150px;
+      height: 150px;
+      background: #5824FF;
+      filter: blur(150px);
+      -webkit-filter: blur(150px);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    background: #C30AFF;
+    opacity: 0.2;
+    filter: blur(700px);
+    -webkit-filter: blur(700px);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    z-index: 1;
+
+    @include media-breakpoint-down(sm) {
+      width: 200px;
+      height: 200px;
+      background: #C30AFF;
+      filter: blur(200px);
+      -webkit-filter: blur(200px);
+    }
+  }
+}
+
+.decor-buble__two {
+  &::before {
+    content: "";
+    position: absolute;
+    height: 700px;
+    width: 700px;
+    background: #170DA5;
+    opacity: 0.3;
+    filter: blur(600px);
+    -webkit-filter: blur(600px);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    z-index: 1;
+
+    @include media-breakpoint-down(sm) {
+      width: 200px;
+      height: 200px;
+      opacity: 0.2;
+      background: #5824FF;
+      filter: blur(200px);
+      -webkit-filter: blur(200px);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    background: #C30AFF;
+    opacity: 0.2;
+    filter: blur(600px);
+    -webkit-filter: blur(600px);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    z-index: 1;
+
+    @include media-breakpoint-down(sm) {
+      width: 300px;
+      height: 300px;
+      background: #C30AFF;
+      filter: blur(300px);
+      -webkit-filter: blur(300px);
+    }
+  }
+}
