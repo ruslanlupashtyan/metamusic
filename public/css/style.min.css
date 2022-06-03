@@ -2458,7 +2458,16 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
-article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
   display: block; }
 
 body {
@@ -2479,7 +2488,12 @@ hr {
   height: 0;
   overflow: visible; }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
@@ -2636,12 +2650,6 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button; }
-
-button:not(:disabled),
-[type="button"]:not(:disabled),
-[type="reset"]:not(:disabled),
-[type="submit"]:not(:disabled) {
-  cursor: pointer; }
 
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
@@ -3575,6 +3583,8 @@ input:-webkit-autofill:active {
 h1 {
   font-size: 88px;
   line-height: 105px; }
+  h1 span {
+    display: block; }
 
 h2 {
   font-size: 56px;
@@ -4150,7 +4160,7 @@ input {
     border: 1px solid #FFFFFF;
     border-radius: 30px;
     transition: all 0.4s;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 31px; }
     @media (max-width: 767.98px) {
       .btn__secondary {
