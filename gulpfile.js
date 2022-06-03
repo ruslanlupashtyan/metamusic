@@ -58,7 +58,7 @@ gulp.task('scssTask', function () {
   return src('app/scss/style.scss')
     .pipe(sass().on('error', sass.logError)) 
     .pipe(postcss([autoprefixer()]))
-    .pipe(cssmin())
+    // .pipe(cssmin())
     .pipe(rename('style.min.css'))
     .pipe(dest('public/css'))
     .pipe(browserSync.stream());

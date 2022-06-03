@@ -1,5 +1,5 @@
 * {
-  cursor: url('../../images/cursor.png'), auto;
+  cursor: url('images/cursor.png'), auto;
 }
 
 // 
@@ -7,7 +7,7 @@
 // 
 
 .pointer {
-  cursor: url('../../images/cursor-pointer.png'), auto;
+  cursor: url('images/cursor-pointer.png'), auto;
 }
 
 body {
@@ -17,7 +17,6 @@ body {
 
   button {
     color: #ffffff;
-    // cursor: url('../../images/cursor-pointer.png'), auto;
   }
 }
 
@@ -25,7 +24,7 @@ body {
   position: relative;
   padding-top: 275px;
   height: 100vh;
-  background-image: url(../../images/banner.jpg);
+  background-image: url(images/banner.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
