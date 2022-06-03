@@ -1,6 +1,7 @@
 .rewards {
+
   &__wrapper {
-    background-color: #0A0021;
+    position: relative;
     padding: 75px 0 70px;
 
     @include media-breakpoint-down(sm) {
@@ -57,9 +58,11 @@
         display: none;
       }
     }
+
     .swiper-button-next {
       right: 30px;
     }
+
     .swiper-button-prev {
       left: 30px;
     }
@@ -219,6 +222,34 @@
 
       @include media-breakpoint-down(sm) {
         max-width: 164px;
+      }
+    }
+  }
+
+  &__shadow {
+    .shadow-1 {
+      top: 118px;
+      right: 115px;
+
+      &_double {
+        top: 334px;
+        left: 50px;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      .shadow-1 {
+        width: 200px;
+        height: 200px;
+        top: 17px;
+        left: -54px;
+
+        &_double {
+          width: 300px;
+          height: 300px;
+          top: 372px;
+          right: -68px;
+        }
       }
     }
   }

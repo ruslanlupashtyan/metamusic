@@ -13,6 +13,20 @@ h3 {
   line-height: 48px;
 }
 
+@media screen and (max-width: 1199px) {
+  h1 {
+    font-size: 62px;
+    line-height: 74px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  h1 {
+    font-size: 52px;
+    line-height: 64px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   h1 {
     font-size: 30px;

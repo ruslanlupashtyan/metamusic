@@ -1,7 +1,10 @@
 .faq {
+  position: relative;
+
   &__warapper {
     background-color: #0A0021;
     padding: 70px 0 140px;
+
     @include media-breakpoint-down(sm) {
       padding: 40px 0 72px;
     }
@@ -10,6 +13,7 @@
       &::before {
         top: -115px;
         left: 14px;
+
         @include media-breakpoint-down(sm) {
           top: 383px;
           left: -59px;
@@ -19,6 +23,7 @@
       &::after {
         bottom: -450px;
         right: 35px;
+
         @include media-breakpoint-down(sm) {
           right: 45px;
           bottom: -80px;
@@ -39,6 +44,36 @@
     right: 0;
     z-index: 1;
     bottom: -245px;
+  }
+
+  &__shadow {
+    .shadow-2 {
+      right: 35px;
+      bottom: -450px;
+    }
+
+    .shadow-3 {
+      width: 500px;
+      height: 500px;
+      left: 14px;
+      bottom: 384px;
+    }
+
+    @include media-breakpoint-down(md) {
+      .shadow-2 {
+        width: 150px;
+        height: 150px;
+        left: -59px;
+        bottom: 109px;
+      }
+
+      .shadow-3 {
+        width: 300px;
+        height: 300px;
+        left: -94px;
+        bottom: 470px;
+      }
+    }
   }
 }
 
@@ -107,6 +142,7 @@
       overflow: hidden;
       transition: all 0.4s;
       opacity: 0;
+
       @include media-breakpoint-down(sm) {
         padding-left: 32px;
       }

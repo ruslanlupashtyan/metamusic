@@ -39,13 +39,20 @@
       <div class="container">
         <div class="header__inner">
           <a href="#" class="header__logo">
-            <img src="images/logo.png" alt="logo">
+            <img class="pointer" src="images/logo.png" alt="logo">
           </a>
           <div class="header__buttons">
-            <button class="header__button_wave"></button>
-            <a href="#" class="header__button_discord btn btn__primary">
-              <p>join us</p>
-              <svg width="34" height="26" viewBox="0 0 34 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="everlib-logo pointer">
+              <span class="muted everlib-logo-first-bar"></span>
+              <span class="muted everlib-logo-second-bar"></span>
+              <span class="muted everlib-logo-third-bar"></span>
+              <span class="muted everlib-logo-fourth-bar"></span>
+              <span class="muted everlib-logo-fifth-bar"></span>
+            </div>
+            <a href="#" class="header__button_discord btn pointer">
+              <p class="pointer">join us</p>
+              <svg class="pointer" width="34" height="26" viewBox="0 0 34 26" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M28.5516 2.403C26.427 1.42817 24.1487 0.709953 21.7667 0.298601C21.7233 0.290662 21.68 0.310502 21.6576 0.350182C21.3646 0.871314 21.0401 1.55117 20.8128 2.08554C18.2507 1.70197 15.7018 1.70197 13.1923 2.08554C12.9649 1.53929 12.6286 0.871314 12.3343 0.350182C12.3119 0.311825 12.2686 0.291986 12.2252 0.298601C9.84448 0.708638 7.56622 1.42685 5.44035 2.403C5.42194 2.41094 5.40617 2.42418 5.3957 2.44136C1.07432 8.89741 -0.10949 15.1948 0.471246 21.4141C0.473874 21.4445 0.490954 21.4736 0.514604 21.4921C3.36573 23.5859 6.12753 24.857 8.83805 25.6996C8.88143 25.7128 8.92739 25.6969 8.95499 25.6612C9.59617 24.7856 10.1677 23.8624 10.6578 22.8915C10.6867 22.8346 10.6591 22.7672 10.6 22.7447C9.6934 22.4008 8.83016 21.9815 7.99978 21.5053C7.9341 21.467 7.92884 21.373 7.98927 21.3281C8.16401 21.1971 8.3388 21.0609 8.50565 20.9233C8.53584 20.8982 8.57791 20.8929 8.6134 20.9088C14.0686 23.3994 19.9745 23.3994 25.3654 20.9088C25.4009 20.8916 25.4429 20.8969 25.4744 20.922C25.6413 21.0596 25.8161 21.1971 25.9921 21.3281C26.0525 21.373 26.0486 21.467 25.9829 21.5053C25.1525 21.9907 24.2893 22.4008 23.3814 22.7434C23.3223 22.7659 23.296 22.8346 23.3249 22.8915C23.8255 23.861 24.3971 24.7843 25.0264 25.6599C25.0527 25.6969 25.1 25.7128 25.1433 25.6996C27.867 24.857 30.6288 23.5859 33.4799 21.4921C33.5049 21.4736 33.5207 21.4458 33.5233 21.4154C34.2183 14.2252 32.3592 7.97948 28.5949 2.44267C28.5857 2.42418 28.57 2.41094 28.5516 2.403ZM11.4724 17.6272C9.83002 17.6272 8.47673 16.1193 8.47673 14.2676C8.47673 12.4158 9.80377 10.9079 11.4724 10.9079C13.1541 10.9079 14.4943 12.429 14.468 14.2676C14.468 16.1193 13.141 17.6272 11.4724 17.6272ZM22.5484 17.6272C20.9061 17.6272 19.5528 16.1193 19.5528 14.2676C19.5528 12.4158 20.8798 10.9079 22.5484 10.9079C24.2302 10.9079 25.5703 12.429 25.5441 14.2676C25.5441 16.1193 24.2302 17.6272 22.5484 17.6272Z"
                   fill="white" />
@@ -56,14 +63,20 @@
       </div>
     </div>
   </header>
-
   <main id="scroll" class="main">
 
     <section class="banner">
       <div class="banner__wrapper">
         <div class="container">
           <div class="banner__inner">
-            <button class="banner__button">Click anywhere to enable the sound</button>
+            <p class="banner__button" id="banner-move">
+              <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.69014 1.17858C10.7496 0.230903 12.854 0.586714 13 2.68996V18.31C13 19.8214 11.1801 21.0455 9.69014 19.8214L4.127 15H2C0.963454 15 0 14.139 0 13V8C0 6.9289 0.89363 6 2 6H4.1265L9.69014 1.17858ZM14.0003 6.72645C15.2121 7.54616 16 8.94455 16 10.5C16 12.0453 15.2098 13.4402 14.0005 14.2634L14.0003 6.72645Z"
+                  fill="white" />
+              </svg>
+              <span>Click anywhere to enable the sound</span>
+            </p>
             <h1 class="banner__title">
               <p>Get an experience</p>
               <p>that combines Music</p>
@@ -124,8 +137,12 @@
           </div>
         </div>
       </div>
+      <div class="about__shadow shadow">
+        <div class="shadow-1"></div>
+        <div class="shadow-2"></div>
+        <div class="shadow-3"></div>
+      </div>
     </section>
-
     <section class="roadmap">
       <div class="roadmap__wrapper">
         <div class="container">
@@ -143,7 +160,7 @@
               <i class="lines__last line"></i>
             </div>
             <div class="roadmap__blocks">
-              <div class="roadmap__item col-md-5">
+              <div class="roadmap__item block col-md-5">
                 <h3>
                   Lorem ipsum
                 </h3>
@@ -152,7 +169,7 @@
                   cras
                 </p>
               </div>
-              <div class="roadmap__item col-md-5">
+              <div class="roadmap__item block col-md-5">
                 <h3>
                   Lorem ipsum
                 </h3>
@@ -160,7 +177,7 @@
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel, urna pellentesque
                 </p>
               </div>
-              <div class="roadmap__item col-md-5">
+              <div class="roadmap__item block col-md-5">
                 <h3>
                   Lorem ipsum
                 </h3>
@@ -171,9 +188,13 @@
             </div>
           </div>
         </div>
+        <div class="roadmap__shadow shadow">
+          <div class="shadow-1"></div>
+          <div class="shadow-2"></div>
+          <div class="shadow-3"></div>
+        </div>
       </div>
     </section>
-
     <section class="mint">
       <div class="mint__wrapper">
         <div class="container">
@@ -209,9 +230,57 @@
             </div>
           </div>
         </div>
+        <div class="mint__shadow shadow">
+          <div class="shadow-1"></div>
+          <div class="shadow-2"></div>
+        </div>
       </div>
     </section>
-
+    <section class="dao">
+      <div class="dao__wrapper">
+        <div class="container">
+          <div class="dao__inner">
+            <h2 class="dao__title">
+              DAO
+            </h2>
+            <div class="dao__text">
+              Exclusive pre-launch party to cardholders, community vote on organizing Meta Music events
+            </div>
+            <div class="dao__items">
+              <div class="dao__item block col-md-5">
+                <h3 class="item__title">Concert</h3>
+                <div class="item__text">
+                  <p>Announcement of the artists selected by the DAO, opening of the ticket office</p>
+                </div>
+              </div>
+              <div class="dao__item block col-md-5">
+                <h3 class="item__title">Post-Concert</h3>
+                <div class="item__text">
+                  <p>Exclusive evening to cardholders, redistribution of profits to holders of a rare or legendary NFTs
+                  </p>
+                </div>
+              </div>
+              <div class="dao__item block col-md-5">
+                <h3 class="item__title">Lottery</h3>
+                <div class="item__text">
+                  <p>Meta Music lottery for holders of a common NFT</p>
+                </div>
+              </div>
+            </div>
+            <div class="dao__lines">
+              <i class="dao__dot"></i>
+              <i class="dao__dot"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dao__shadow shadow">
+        <div class="shadow-1"></div>
+        <div class="shadow-2"></div>
+        <div class="shadow-3"></div>
+        <div class="shadow-3_double"></div>
+      </div>
+    </section>
     <section class="utilities">
       <div class="utilities__wrapper position-relative decor-buble__two">
         <div class="container">
@@ -234,8 +303,10 @@
           </div>
         </div>
       </div>
+      <div class="utilities__shadow shadow">
+        <div class="shadow-2"></div>
+      </div>
     </section>
-
     <style>
       .rewards__inner {
         background-image: url('images/rewards-wave.png');
@@ -247,7 +318,6 @@
         }
       }
     </style>
-
     <section class="rewards">
       <div class="rewards__wrapper">
         <div class="container">
@@ -368,9 +438,12 @@
             <a href="#" class="rewards__call_button btn__secondary">submit</a>
           </div>
         </div>
+        <div class="rewards__shadow shadow">
+          <div class="shadow-1"></div>
+          <div class="shadow-1_double"></div>
+        </div>
       </div>
     </section>
-
     <section class="faq">
       <div class="faq__warapper position-relative decor-buble">
         <div class="container">
@@ -435,9 +508,12 @@
         <img class="faq__shape position-absolute d-none d-md-block" src="images/shape.png" alt="shape">
         <img class="faq__shape position-absolute d-md-none" src="images/shape-mobile.png" alt="shape">
       </div>
+      <div class="faq__shadow shadow">
+        <div class="shadow-3"></div>
+        <div class="shadow-2"></div>
+      </div>
     </section>
   </main>
-
   <footer class="footer">
     <div class="footer__wrapper position-relative">
       <div class="container">
@@ -463,9 +539,12 @@
       </div>
     </div>
   </footer>
-
+  <div class="bg-audio">
+    <audio loop class="music">
+      <source src="audio/002.mp3" type="audio/mp3">
+    </audio>
+  </div>
   <script src="js/index.min.js"></script>
-
 </body>
 
 </html>

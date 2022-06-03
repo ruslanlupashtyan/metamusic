@@ -3,6 +3,8 @@
   position: fixed;
   padding: 20px 0;
   z-index: 10;
+  background: rgba(19, 4, 64, 0.5);
+  backdrop-filter: blur(8px);
 
   &__inner {
     display: flex;
@@ -12,9 +14,11 @@
 
   &__buttons {
     display: flex;
+    align-items: center;
   }
 
   &__button_discord {
+    // cursor: url('../../images/cursor-pointer.png'), auto;
     display: flex;
     padding: 20px 32px;
     color: #fff;
@@ -22,12 +26,294 @@
     p {
       margin-right: 20px;
       line-height: 24px;
+      // cursor: url('../../images/cursor-pointer.png'), auto;
+    }
+
+    svg {
+      // cursor: url('../../images/cursor-pointer.png'), auto;
     }
   }
 }
 
-@media screen and (max-width: 768px) {
+.everlib-logo {
+  height: 20px;
+  margin-right: 36px;
+  // display: flex;
+  // align-items: flex-end;
+  background: transparent;
+
+  .everlib-logo-first-bar,
+  .everlib-logo-second-bar,
+  .everlib-logo-third-bar,
+  .everlib-logo-fourth-bar,
+  .everlib-logo-fifth-bar {
+    &.muted {
+      animation-delay: 0ms;
+      animation: muted 4s 0s infinite;
+    }
+
+    display: inline-block;
+    background-color: #fff;
+    width: 3px;
+    border-radius: 3px;
+    // margin-right: 3px;
+    transition: .5s;
+    animation-timing-function: linear;
+    animation: equalize 4s 0s infinite;
+  }
+
+  .everlib-logo-first-bar {
+    height: 4px;
+    // background: #0f87ae;
+    transition: 0.5s;
+    animation-delay: -1.9s;
+  }
+
+  .everlib-logo-second-bar {
+    height: 4px;
+    // background: #b75690;
+    animation-delay: -2.9s;
+  }
+
+  .everlib-logo-third-bar {
+    height: 4px;
+    // background: #86c035;
+    animation-delay: -3.9s;
+  }
+
+  .everlib-logo-fourth-bar {
+    height: 4px;
+    // background: #F0902E;
+    animation-delay: -4.9s;
+  }
+
+  .everlib-logo-fifth-bar {
+    height: 4px;
+    // background: #F0902E;
+    animation-delay: -5.9s;
+  }
+}
+
+@keyframes equalize {
+  0% {
+    height: 16px;
+  }
+
+  4% {
+    height: 14px;
+  }
+
+  8% {
+    height: 12px;
+  }
+
+  12% {
+    height: 10px;
+  }
+
+  16% {
+    height: 10px;
+  }
+
+  20% {
+    height: 12px;
+  }
+
+  24% {
+    height: 14px;
+  }
+
+  28% {
+    height: 12px;
+  }
+
+  32% {
+    height: 13px;
+  }
+
+  36% {
+    height: 16px;
+  }
+
+  40% {
+    height: 10px;
+  }
+
+  44% {
+    height: 12px;
+  }
+
+  48% {
+    height: 16px;
+  }
+
+  52% {
+    height: 14px;
+  }
+
+  56% {
+    height: 10px;
+  }
+
+  60% {
+    height: 2px;
+  }
+
+  64% {
+    height: 4px;
+  }
+
+  68% {
+    height: 12px;
+  }
+
+  72% {
+    height: 16px;
+  }
+
+  76% {
+    height: 2px;
+  }
+
+  80% {
+    height: 14px;
+  }
+
+  84% {
+    height: 7px;
+  }
+
+  88% {
+    height: 16px;
+  }
+
+  92% {
+    height: 13px;
+  }
+
+  96% {
+    height: 6px;
+  }
+
+  100% {
+    height: 4px;
+  }
+}
+
+@keyframes muted {
+  0% {
+    height: 4px;
+  }
+
+  4% {
+    height: 4px;
+  }
+
+  8% {
+    height: 4px;
+  }
+
+  12% {
+    height: 4px;
+  }
+
+  16% {
+    height: 4px;
+  }
+
+  20% {
+    height: 4px;
+  }
+
+  24% {
+    height: 4px;
+  }
+
+  28% {
+    height: 4px;
+  }
+
+  32% {
+    height: 4px;
+  }
+
+  36% {
+    height: 4px;
+  }
+
+  40% {
+    height: 4px;
+  }
+
+  44% {
+    height: 4px;
+  }
+
+  48% {
+    height: 4px;
+  }
+
+  52% {
+    height: 4px;
+  }
+
+  56% {
+    height: 4px;
+  }
+
+  60% {
+    height: 4px;
+  }
+
+  64% {
+    height: 4px;
+  }
+
+  68% {
+    height: 4px;
+  }
+
+  72% {
+    height: 4px;
+  }
+
+  76% {
+    height: 4px;
+  }
+
+  80% {
+    height: 4px;
+  }
+
+  84% {
+    height: 4px;
+  }
+
+  88% {
+    height: 4px;
+  }
+
+  92% {
+    height: 4px;
+  }
+
+  96% {
+    height: 4px;
+  }
+
+  100% {
+    height: 4px;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .header {
+    &__logo {
+      img {
+        width: 124px;
+      }
+    }
+
     &__button_discord {
       padding: 8px 20px;
       color: #fff;
@@ -42,5 +328,9 @@
         margin-right: 10px;
       }
     }
+  }
+
+  .everlib-logo {
+    margin-right: 20px;
   }
 }
