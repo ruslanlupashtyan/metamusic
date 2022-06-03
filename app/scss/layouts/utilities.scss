@@ -1,17 +1,21 @@
 .utilities {
+  position: relative;
+
   &__wrapper {
-    background-color: #0A0021;
-    padding: 150px 0 75px;
+    padding: 162px 0 75px;
 
     @include media-breakpoint-down(sm) {
       padding: 40px 0 37px;
     }
+
     &.decor-buble__two {
       &::before {
         display: none;
       }
+
       &::after {
         display: none;
+
         @include media-breakpoint-down(sm) {
           display: block;
           top: 0;
@@ -57,6 +61,20 @@
         transform: translateY(-50%);
         width: 32px;
         height: 32px;
+      }
+    }
+  }
+
+  &__shadow {
+    .shadow-2 {
+      display: none;
+
+      @include media-breakpoint-down(md) {
+        display: block;
+        width: 300px;
+        height: 300px;
+        top: 0;
+        right: -62px;
       }
     }
   }

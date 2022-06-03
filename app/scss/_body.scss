@@ -4,14 +4,14 @@ html {
 
 html,
 body {
-  overflow-x: hidden;
   height: 100%;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
+
 main {
   overflow: hidden;
 }
+
 *,
 *:before,
 *:after {
@@ -25,6 +25,7 @@ body {
   font-weight: 500;
   font-size: 18px;
   line-height: 31px;
+
   @include media-breakpoint-down(sm) {
     font-size: 14px;
     line-height: 24px;
@@ -63,6 +64,7 @@ input {
 *:focus-visible {
   outline: none;
 }
+
 .container {
   @include media-breakpoint-down(sm) {
     padding-left: 16px;

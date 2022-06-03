@@ -23,9 +23,8 @@ const files = {
 // Static server
 gulp.task('watch', function () {
   browserSync.init({
-    server: {
-      baseDir: 'public',
-    },
+    server: {baseDir: 'public'},
+    port: 2224
   });
   return watch(
     [files.scssPath, files.jsPath, files.htmlPath, files.imgPath],
@@ -35,7 +34,7 @@ gulp.task('watch', function () {
 
 //Copying assets
 gulp.task('copy', function () {
-  return src(['app/images/**/*', 'app/fonts/**/*', 'app/library/**/*'], {
+  return src(['app/images/**/*', 'app/fonts/**/*', 'app/library/**/*', 'app/audio/*'], {
     base: 'app',
   }).pipe(gulp.dest('public'));
 });
@@ -75,7 +74,7 @@ gulp.task('jsTask', function () {
     .src(files.jsPath)
     .pipe(concat('scripts.js'))
     .pipe(babel())
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(rename('index.min.js'))
     .pipe(gulp.dest('public/js'))
     .pipe(browserSync.stream());

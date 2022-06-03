@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-
   // accordion
   let acc = document.querySelectorAll('.accordion__item_button');
   for (let i = 0; i < acc.length; i++) {
@@ -15,6 +14,70 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  function randomNumber(max) {
+    let randomNumb = max - (Math.random() * 1000);
+    return randomNumb
+  }
+
+  //audio
+  let audio = document.querySelector('.music');
+  let sound = document.querySelector('.banner');
+  let everlibParent = document.querySelector('.everlib-logo');
+  let everlibs = everlibParent.querySelectorAll('span');
+
+  sound.addEventListener('click', function(){
+    audio.currentTime = randomNumber(audio.duration);
+    if(audio.paused) {
+      audio.play();
+      bannerMove.classList.add('hidden');
+    } else {
+      audio.pause()
+    };
+    for (let k = 0; k < everlibs.length; k++) {
+      everlibs[k].classList.toggle('muted');
+    }
+  });
+
+  everlibParent.addEventListener('click', function(){
+    audio.currentTime = randomNumber(audio.duration);
+    if(audio.paused) {
+      audio.play();
+      bannerMove.classList.add('hidden');
+    } else {
+      audio.pause()
+    };
+    for (let k = 0; k < everlibs.length; k++) {
+      console.log(everlibs[k]);
+      everlibs[k].classList.toggle('muted');
+    }
+  })
+
+  
+  // mouse action
+  
+  let bannerMove = document.querySelector('#banner-move');
+  let banner = document.querySelector('.banner');
+  let about = document.querySelector('.about')
+  banner.addEventListener('mousemove', function(e){
+    let xPos = e.clientX;
+    let yPos = e.clientY;
+    bannerMove.style.top = yPos+32+'px';
+    bannerMove.style.left = xPos+32+'px';
+  });
+
+  
+  about.addEventListener('mouseover', function(){
+    bannerMove.classList.add('hidden');
+  });
+  banner.addEventListener('mouseover', function(){
+    if(audio.paused) {
+      bannerMove.classList.remove('hidden');
+    } else {
+      bannerMove.classList.add('hidden');
+    }
+  })
+ 
 
   // swiper
 
