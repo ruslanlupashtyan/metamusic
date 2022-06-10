@@ -33,7 +33,7 @@
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
-<body>
+<body id="body" class="no-scroll">
   <header class="header">
     <div class="header__wrapper">
       <div class="container">
@@ -64,7 +64,14 @@
     </div>
   </header>
   <main id="scroll" class="main">
-    <section class="banner" style="--t-percent: 86%; --b-percent: 167%">
+    <style>
+      .banner {
+        background-image: url('../images/bg-finish.png');
+      }
+    </style>
+    <section class="banner start position-relative">
+      <div class="banner__loading position-absolute d-block" style="background-image: url('../images/bg-start.png');">
+      </div>
       <div class="banner__wrapper">
         <div class="container">
           <div class="banner__inner">
@@ -77,9 +84,9 @@
               <span>Click anywhere to enable the sound</span>
             </p>
             <h1 class="banner__title">
-              <span>Get an experience</span>
-              <span>that combines Music</span>
-              <span>and NFT</span>
+              <span class="banner__title_line"><span>Get an experience</span></span>
+              <span class="banner__title_line"><span>that combines Music</span></span>
+              <span class="banner__title_line"><span>and NFT</span></span>
             </h1>
             <div class="banner__decor">
               <img src="images/mouse.png" alt="mouse">

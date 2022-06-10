@@ -89,7 +89,16 @@ document.addEventListener('DOMContentLoaded', function () {
   banner.addEventListener('click', function(){
     this.style.setProperty('--t-percent', '50%');
     this.style.transition = 'all 5000ms'
-  })
+  });
+
+  // loading
+  const bodyScroll = document.querySelector('body');
+  if(bodyScroll != null && bodyScroll.classList.contains('no-scroll')) {
+    function bodyScrollRemove() {
+      bodyScroll.classList.remove('no-scroll');
+    }
+    setTimeout(bodyScrollRemove, 7000);
+  };
 
   // swiper
 
