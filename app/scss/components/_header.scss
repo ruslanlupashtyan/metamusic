@@ -18,7 +18,6 @@
   }
 
   &__button_discord {
-    // cursor: url('../../images/cursor-pointer.png'), auto;
     display: flex;
     padding: 20px 32px;
     color: #fff;
@@ -26,11 +25,6 @@
     p {
       margin-right: 20px;
       line-height: 24px;
-      // cursor: url('../../images/cursor-pointer.png'), auto;
-    }
-
-    svg {
-      // cursor: url('../../images/cursor-pointer.png'), auto;
     }
   }
 }
@@ -38,9 +32,18 @@
 .everlib-logo {
   height: 20px;
   margin-right: 36px;
-  // display: flex;
-  // align-items: flex-end;
   background: transparent;
+
+  &:hover {
+
+    .everlib-logo-first-bar,
+    .everlib-logo-second-bar,
+    .everlib-logo-third-bar,
+    .everlib-logo-fourth-bar,
+    .everlib-logo-fifth-bar {
+      background-color: #5824FF;
+    }
+  }
 
   .everlib-logo-first-bar,
   .everlib-logo-second-bar,
@@ -56,40 +59,35 @@
     background-color: #fff;
     width: 3px;
     border-radius: 3px;
-    // margin-right: 3px;
     transition: .5s;
     animation-timing-function: linear;
     animation: equalize 4s 0s infinite;
+
   }
 
   .everlib-logo-first-bar {
     height: 4px;
-    // background: #0f87ae;
     transition: 0.5s;
     animation-delay: -1.9s;
   }
 
   .everlib-logo-second-bar {
     height: 4px;
-    // background: #b75690;
     animation-delay: -2.9s;
   }
 
   .everlib-logo-third-bar {
     height: 4px;
-    // background: #86c035;
     animation-delay: -3.9s;
   }
 
   .everlib-logo-fourth-bar {
     height: 4px;
-    // background: #F0902E;
     animation-delay: -4.9s;
   }
 
   .everlib-logo-fifth-bar {
     height: 4px;
-    // background: #F0902E;
     animation-delay: -5.9s;
   }
 }

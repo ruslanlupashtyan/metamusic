@@ -54,8 +54,17 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 
   
+  // animation
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('SetTimeOut')
+    }, 2000);
+  })
+  promise.then((val) => {
+    console.log(val)
+  })
+
   // mouse action
-  
   let bannerMove = document.querySelector('#banner-move');
   let banner = document.querySelector('.banner');
   let about = document.querySelector('.about')
@@ -66,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function () {
     bannerMove.style.left = xPos+32+'px';
   });
 
-  
   about.addEventListener('mouseover', function(){
     bannerMove.classList.add('hidden');
   });
@@ -76,8 +84,12 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       bannerMove.classList.add('hidden');
     }
+  });
+
+  banner.addEventListener('click', function(){
+    this.style.setProperty('--t-percent', '50%');
+    this.style.transition = 'all 5000ms'
   })
- 
 
   // swiper
 

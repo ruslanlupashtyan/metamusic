@@ -3819,6 +3819,12 @@ input {
   height: 20px;
   margin-right: 36px;
   background: transparent; }
+  .everlib-logo:hover .everlib-logo-first-bar,
+  .everlib-logo:hover .everlib-logo-second-bar,
+  .everlib-logo:hover .everlib-logo-third-bar,
+  .everlib-logo:hover .everlib-logo-fourth-bar,
+  .everlib-logo:hover .everlib-logo-fifth-bar {
+    background-color: #5824FF; }
   .everlib-logo .everlib-logo-first-bar,
   .everlib-logo .everlib-logo-second-bar,
   .everlib-logo .everlib-logo-third-bar,
@@ -4795,10 +4801,18 @@ body {
   position: relative;
   padding-top: 275px;
   height: 100vh;
-  background-image: url("../images/banner.jpg");
+  background-image: url("../images/bg-finish.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
+  .banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(0deg, #000000 var(--t-percent), #00000000 var(--b-percent)); }
   .banner__button {
     white-space: nowrap;
     position: fixed;
@@ -4816,19 +4830,15 @@ body {
       visibility: hidden; }
   .banner__title {
     margin-bottom: 118px;
-    text-align: center; }
+    text-align: center;
+    visibility: hidden; }
   .banner__decor {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    visibility: hidden; }
     .banner__decor img {
       margin-bottom: 10px; }
-  .banner__shadow {
-    position: absolute;
-    height: 150px;
-    width: 100%;
-    bottom: 0;
-    background: linear-gradient(2.39deg, #0A0021 2%, rgba(10, 0, 33, 0) 98.04%); }
 
 .about {
   padding: 130px 0 140px;
@@ -4850,15 +4860,6 @@ body {
         content: url(../../images/wave.png);
         position: absolute;
         left: calc(-945px - 130px); }
-  .about__shadow .shadow-1 {
-    top: 244px;
-    left: -215px; }
-  .about__shadow .shadow-2 {
-    top: 615px;
-    right: -73px; }
-  .about__shadow .shadow-3 {
-    top: 339px;
-    right: 570px; }
 
 .block {
   padding: 40px 30px;
@@ -4884,18 +4885,6 @@ body {
   .roadmap__item:nth-child(2) {
     margin: 247px 0 290px;
     margin-left: auto; }
-
-.roadmap__shadow .shadow-1 {
-  top: 157px;
-  right: -90px; }
-
-.roadmap__shadow .shadow-2 {
-  top: 641px;
-  left: -257px; }
-
-.roadmap__shadow .shadow-3 {
-  top: 463px;
-  left: 275px; }
 
 .line {
   width: 2px;
@@ -5008,11 +4997,6 @@ body {
     font-size: 28px;
     line-height: 48px;
     font-weight: 600; }
-  .mint__shadow .shadow-1 {
-    top: -30px;
-    right: 112px; }
-  .mint__shadow .shadow-2 {
-    display: none; }
 
 .dao {
   position: relative;
@@ -5092,61 +5076,28 @@ body {
         border-top: unset;
         border-left: unset;
         border-bottom-right-radius: 60px; }
-  .dao__shadow .shadow-1 {
-    top: 341px;
-    right: -117px; }
-  .dao__shadow .shadow-2 {
-    top: 438px;
-    left: -136px; }
-  .dao__shadow .shadow-3 {
-    top: 260px;
-    left: 396px; }
-    .dao__shadow .shadow-3_double {
-      top: 870px;
-      right: 188px; }
 
-.shadow-1 {
-  position: absolute;
-  width: 700px;
-  height: 700px;
-  background: #170DA5;
+.shadow {
   border-radius: 50%;
-  opacity: 0.4;
-  z-index: -1; }
-  .shadow-1_double {
-    position: absolute;
-    width: 700px;
-    height: 700px;
-    background: #170DA5;
-    border-radius: 50%;
-    opacity: 0.4;
-    z-index: -1; }
-
-.shadow-2 {
   position: absolute;
-  width: 800px;
-  height: 800px;
-  border-radius: 50%;
-  background: #C30AFF;
-  opacity: 0.2;
-  z-index: -1; }
-
-.shadow-3 {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  background: #5824FF;
-  opacity: 0.3;
-  z-index: -1; }
-  .shadow-3_double {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    background: #5824FF;
-    opacity: 0.3;
-    z-index: -1; }
+  top: var(--top);
+  right: var(--right);
+  bottom: var(--bottom);
+  left: var(--left);
+  background-color: var(--color);
+  width: var(--size);
+  height: var(--size);
+  opacity: var(--opacity); }
+  @media (max-width: 767.98px) {
+    .shadow {
+      top: var(--m-top);
+      right: var(--m-right);
+      bottom: var(--m-bottom);
+      left: var(--m-left);
+      background-color: var(--m-color);
+      width: var(--m-size);
+      height: var(--m-size);
+      opacity: var(--m-opacity); } }
 
 @media screen and (max-width: 1199px) {
   .mint__item {
@@ -5187,37 +5138,6 @@ body {
         position: absolute;
         top: -100px;
         left: unset; }
-  .about__shadow .shadow-1 {
-    width: 200px;
-    height: 200px;
-    top: 557px;
-    left: -84px; }
-  .about__shadow .shadow-2 {
-    width: 300px;
-    height: 300px;
-    top: 251px;
-    right: -113px; }
-  .about__shadow .shadow-3 {
-    width: 150px;
-    height: 150px;
-    top: 71px;
-    right: -18px; }
-  .roadmap__shadow .shadow-1 {
-    width: 150px;
-    height: 150px;
-    top: 788px;
-    left: -43px; }
-  .roadmap__shadow .shadow-2 {
-    width: 300px;
-    height: 300px;
-    top: 431px;
-    right: -100px;
-    left: unset; }
-  .roadmap__shadow .shadow-3 {
-    width: 150px;
-    height: 150px;
-    top: 158px;
-    left: -11px; }
   .line_first {
     display: none; }
   .line_first-mob {
@@ -5242,17 +5162,6 @@ body {
       border: none;
       padding: unset;
       margin-bottom: 24px; }
-    .mint__shadow .shadow-1 {
-      width: 150px;
-      height: 150px;
-      top: 139px;
-      left: -25px; }
-    .mint__shadow .shadow-2 {
-      display: block;
-      width: 150px;
-      height: 150px;
-      top: -75px;
-      right: -40px; }
   .dao__item:nth-child(2) {
     margin: 128px 0; }
   .dao__dot:first-child {
@@ -5269,22 +5178,7 @@ body {
     .dao__dot:last-child::after {
       width: 60px;
       height: 165px;
-      left: calc(-60px + 12px); }
-  .dao__shadow .shadow-1 {
-    width: 150px;
-    height: 150px;
-    top: 75px;
-    right: 53px; }
-  .dao__shadow .shadow-2 {
-    width: 300px;
-    height: 300px;
-    top: 345px;
-    left: -94px; }
-  .dao__shadow .shadow-3 {
-    width: 300px;
-    height: 300px;
-    top: 463px;
-    right: -105px; } }
+      left: calc(-60px + 12px); } }
 
 @media screen and (max-width: 575px) {
   .roadmap__item:nth-child(2) {
