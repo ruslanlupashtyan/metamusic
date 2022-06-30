@@ -499,7 +499,7 @@ body {
   width: var(--size);
   height: var(--size);
   opacity: var(--opacity);
-  // filter: blur(var(--blur));
+  filter: blur(var(--blur));
 
   @include media-breakpoint-down(sm) {
     top: var(--m-top);
@@ -510,7 +510,7 @@ body {
     width: var(--m-size);
     height: var(--m-size);
     opacity: var(--m-opacity);
-    // filter: blur(var(--m-blur));
+    filter: blur(var(--m-blur));
   }
 }
 

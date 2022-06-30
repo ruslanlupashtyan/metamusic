@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function randomNumber(max) {
-    let randomNumb = max - (Math.random() * 1000);
+    let randomNumb = max - (Math.random() * 100);
     return randomNumb
   }
 
@@ -54,15 +54,15 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 
   
-  // animation
-  let promise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve('SetTimeOut')
-    }, 2000);
-  })
-  promise.then((val) => {
-    console.log(val)
-  })
+  // // animation
+  // let promise = new Promise((resolve, reject) => {
+  //   setTimeout(() => {
+  //     resolve('SetTimeOut')
+  //   }, 2000);
+  // })
+  // promise.then((val) => {
+  //   console.log(val)
+  // })
 
   // mouse action
   let bannerMove = document.querySelector('#banner-move');
