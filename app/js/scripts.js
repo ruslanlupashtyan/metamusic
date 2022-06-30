@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function randomNumber(max) {
-    let randomNumb = max - (Math.random() * 1000);
+    let randomNumb = max - (Math.random() * 100);
     return randomNumb
   }
 
@@ -54,15 +54,15 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 
   
-  // animation
-  let promise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve('SetTimeOut')
-    }, 2000);
-  })
-  promise.then((val) => {
-    console.log(val)
-  })
+  // // animation
+  // let promise = new Promise((resolve, reject) => {
+  //   setTimeout(() => {
+  //     resolve('SetTimeOut')
+  //   }, 2000);
+  // })
+  // promise.then((val) => {
+  //   console.log(val)
+  // })
 
   // mouse action
   let bannerMove = document.querySelector('#banner-move');
@@ -89,7 +89,16 @@ document.addEventListener('DOMContentLoaded', function () {
   banner.addEventListener('click', function(){
     this.style.setProperty('--t-percent', '50%');
     this.style.transition = 'all 5000ms'
-  })
+  });
+
+  // loading
+  const bodyScroll = document.querySelector('body');
+  if(bodyScroll != null && bodyScroll.classList.contains('no-scroll')) {
+    function bodyScrollRemove() {
+      bodyScroll.classList.remove('no-scroll');
+    }
+    setTimeout(bodyScrollRemove, 7000);
+  };
 
   // swiper
 
